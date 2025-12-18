@@ -1,23 +1,4 @@
-# Terraform/OpenTofu module to manage Proxmox Virtual Environment 7 and above
-
-This module will create an LXC container based on the template mentioned.
-
-- [x] create container
-- [x] configure container
-- [x] install ssh for SSH access
-
-NOTE: unfortunately it seems that OpenTofu registry does not have the required
-provider and thus it cannot install it. Either use Terraform or install the provide
-manually.
-
-NOTE2: the module it is configured to ignore changes to: tags, ssh key, password and 
-target_node as to avoid triggering a change for common actions that are suitable
-to simply be done in the UI. This has the unintended consequence of also not 
-triggering a change when vars are changed. 
-
-## Requirements
-
-The module uses the `MaartendeKruijf/proxmox` which at the time of last update it was the only
+# Comment: This section provides a brief overview of the module's purpose and functionality.
 provider supporting Proxmox 8.
 
 ## Usage
